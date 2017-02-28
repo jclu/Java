@@ -125,7 +125,7 @@ public class TestUtils {
 
         try {
 
-            String fileName = T_WORK + "/emaas.properties.log";
+            String fileName = T_WORK + "/env.properties";
             file = new File(fileName);
             fos = new FileOutputStream(file, true);
 
@@ -166,7 +166,7 @@ public class TestUtils {
         prop = new Properties();
         
         try {
-            String fileName = T_WORK + "/emaas.properties.log";
+            String fileName = T_WORK + "/env.properties";
             file = new File(fileName);
             fis = new FileInputStream(file);
 
