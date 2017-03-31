@@ -1,0 +1,17 @@
+JPA
+JPA(Java Persistence API)是Sun官方提出的Java持久化规范。
+它为Java开发人员提供了一种对象/关系映射工具来管理Java应用中的关系数据。
+
+Hibernate
+Hibernate是一个开放源代码的对象关系映射框架，它对JDBC进行了非常轻量级的对象封装，
+它将POJO与数据库表建立映射关系，是一个全自动的orm框架，
+hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库。
+Hibernate可以应用在任何使用JDBC的场合，既可以在Java的客户端程序使用，也可以在Servlet/JSP的Web应用中使用。
+
+Spring Data
+Spring Data是一个用于简化数据库访问，并支持云服务的开源框架。
+其主要目标是使得数据库的访问变得方便快捷，并支持map-reduce框架和云计算数据服务。
+
+
+JPA/Hibernate关系？
+Jpa是一种规范，而Hibernate是它的一种实现。
