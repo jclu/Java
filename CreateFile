@@ -1,0 +1,71 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CreateFile {
+
+    public static void main(String []args) {
+        System.out.println("Hello");
+
+        List<String> argus = new ArrayList<String>();
+        argus.add("1");
+
+        try {
+            String confFile = "conf.jiaclu";
+            File file1 = new File(confFile);
+
+            if (argus.size() == 0) {
+                System.out.println("argus: none");
+                if (file1.exists()) {
+                    file1.delete();
+                }
+            } else {
+                System.out.println("argus: yes");
+
+                String arguStr = "";
+                for ( int i = 0; i < argus.size(); i++) {
+                    arguStr += argus.get(i);
+                }
+
+                if (file1.exists()) {
+                    System.out.println("file exists");
+                    String fileStr = "";
+                    String str = "";
+                    try (BufferedReader br = new BufferedReader(new FileReader(confFile))) {
+                        while((str = br.readLine()) != null){
+                            if (!str.equals("")) {
+                                fileStr += str;
+                            }
+                        }
+                    } catch (FileNotFoundException fnfe){
+                        fnfe.printStackTrace();
+                    } catch (IOException ioe){
+                        ioe.printStackTrace();
+                    }
+
+                    if (!arguStr.equals(fileStr)) {
+
+                    }
+                } else {
+
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }
+
+    public static void createRunConfigurationFile(String srcFileName, String srcFileContent, String destFileName) throws IOException {
+        File srcFile = new File(destFileName);
+        srcFile.createNewFile();
+
+        File destFile = new File(srcFileName);
+        destFile.createNewFile();
+
+        // Move file to new directory
+        boolean success = srcFile.renameTo(destFile);
+        if (!success) {
+            throw new IOException();
+        }
+    }
+}
