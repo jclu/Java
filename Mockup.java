@@ -30,6 +30,7 @@ org.springframework.test.util.ReflectionTestUtils.setField(
 
 
 https://stackoverflow.com/questions/17353327/populating-spring-value-during-unit-test
+http://www.cnblogs.com/xiaohunshi/p/5703299.html
     
 3.
 --------------
