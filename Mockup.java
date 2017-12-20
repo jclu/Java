@@ -57,3 +57,20 @@ public static PropertySourcesPlaceholderConfigurer properties() {
   pspc.setProperties(properties);
   return pspc;
 }
+
+3
+------------------
+fileOutputStreamMockUp = new MockUp<FileOutputStream>() {
+@Mock
+public void $init(String name) throws FileNotFoundException {
+            }
+        };
+        try {
+            xxx.yyy(inputStream, clientStorePath, clientFileName);
+        } catch (IOException exception) {
+            Assert.assertTrue(true);
+            return;
+        } finally {
+            fileOutputStreamMockUp.tearDown();
+        }
+        Assert.assertTrue(false);
